@@ -1,0 +1,115 @@
+/* Se você já tiver essas variáveis no index.css, pode apagá-las daqui */
+:root {
+  --primary: #4a90e2;
+  --secondary: #ff9f43;
+  --dark: #2c3e50;
+  --light: #f8f9fa;
+  --white: #ffffff;
+  --error: #e74c3c;
+}
+
+/* Container que ocupa a tela toda */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f1f5f9 100%);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* O "Card" branco centralizado */
+.login-card {
+  background-color: var(--white);
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form h1 {
+  margin: 0 0 0.2rem 0;
+  color: var(--dark);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.login-subtitle {
+  color: #64748b;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Grupos de Input (Label + Campo) */
+.login-form .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.login-form .input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.login-form .input-group input {
+  padding: 0.8rem 1rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.login-form .input-group input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.15);
+}
+
+/* Caixa da Mensagem de Erro */
+.error-message {
+  background-color: #fde8e8;
+  color: var(--error);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  border-left: 4px solid var(--error);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Botão de Submit */
+.btn-submit {
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background-color: #357abd;
+}
+
+.btn-submit:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* Estilo do botão quando está em modo Loading (desativado) */
+.btn-submit:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+

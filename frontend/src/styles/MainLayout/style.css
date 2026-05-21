@@ -1,0 +1,118 @@
+:root {
+  --primary: #4a90e2;
+  --secondary: #ff9f43;
+  --dark: #2c3e50;
+  --sidebar-bg: #1e293b; /* Tom escuro elegante para o menu */
+  --light-bg: #f8f9fa;
+  --white: #ffffff;
+  --border-color: #e2e8f0;
+}
+
+/* Container pai que junta a sidebar e o conteúdo */
+.layout-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ==========================================
+   SIDEBAR (MENU LATERAL)
+   ========================================== */
+.sidebar {
+  width: 260px;
+  background-color: var(--sidebar-bg);
+  color: #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar-brand {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid #334155;
+}
+
+.sidebar-brand h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+}
+
+/* Links do Menu */
+.nav-item {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: #334155;
+  color: var(--white);
+  transform: translateX(4px);
+}
+
+/* ==========================================
+   CONTEÚDO PRINCIPAL (DIREITA)
+   ========================================== */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-bg);
+  overflow-y: auto;
+}
+
+/* Topbar fixa no topo */
+.main-header {
+  height: 70px;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  flex-shrink: 0;
+}
+
+.user-info span {
+  font-weight: 600;
+  color: var(--dark);
+}
+
+/* Botão Sair */
+.btn-logout {
+  background-color: transparent;
+  color: #64748b;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-logout:hover {
+  background-color: #f1f5f9;
+  color: #e74c3c;
+  border-color: #fca5a5;
+}
+
+/* Área interna onde as páginas de fato aparecem */
+.page-content {
+  padding: 2rem;
+  flex: 1;
+}
